@@ -1,0 +1,12 @@
+<h1 class= "jumbotron"> <%= @task.title %> </h1>
+
+<p><%= @task.details%></p>
+<p>The task is completed: <%= @task.completed%></p>
+
+<p><%= link_to "Edit task", edit_task_path(@task) %></p>
+
+<%= link_to "Delete", task_path(@task), method: :delete, data: { confirm: "You sure you want to destroy this task?" }  %>
+
+<p><%= link_to 'back to the list', tasks_path %></p>
+
+
